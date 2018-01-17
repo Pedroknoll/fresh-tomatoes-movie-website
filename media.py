@@ -12,16 +12,19 @@ from datetime import datetime
 from urllib.parse import urljoin
 from webbrowser import open
 
-# Import the library and initialize a TMDb object
 from tmdbv3api import TMDb
+# Change the imported class name to avoid conflicts
+from tmdbv3api import Movie as theMovie
+
+# initialize a TMDb object
 tmdb = TMDb()
 
 # Get the API Key saved as an environment variable.
 tmdb.api_key = getenv('TMDB_API_KEY')
 
-# Change the imported class name to avoid conflicts
-from tmdbv3api import Movie as theMovie
+# initialize a theMovie object
 movie = theMovie()
+
 
 # Movie class that takes TMDB movie ID to initialize, and fills in attributes
 class Movie():
@@ -36,12 +39,13 @@ class Movie():
                                movie.videos(movie_id)[0].key)
 
         # Convert a relative poster url to an absolute url
-        self.poster = urljoin("https://image.tmdb.org",
-                        "/t/p/original" + movie.details(movie_id).poster_path)
+        self.poster = urljoin("https://image.tmdb.org", "/t/p/original"
+                              + movie.details(movie_id).poster_path)
 
         # convert a string datetime to datetime
-        self.release_year = datetime.strptime(movie.details(movie_id).release_date,
-                                              "%Y-%m-%d").year
+        self.release_year = datetime.strptime(
+                                     movie.details(movie_id).release_date,
+                                     "%Y-%m-%d").year
 
     # Open the youtube trailer url
     def show_trailer(self):
