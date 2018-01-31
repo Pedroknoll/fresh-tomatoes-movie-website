@@ -22,4 +22,4 @@ For that, access the movie's page at the The Movie Database. The ID is the numbe
 4. Access the entertainment_center.py and run it at the terminal:`python entertainment_center.py`
 
 ### License
-This project is licensed under the terms of the [MIT license](https://github.com/Pedroknoll/movie-trailer-website/blob/master/LICENSE).
+This project is licensed under the terms of the [MIT license](https://github.com/Pedroknoll/fresh-tomatoes-movie-website/blob/master/LICENSE).
