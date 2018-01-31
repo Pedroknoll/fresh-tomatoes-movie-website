@@ -9,7 +9,7 @@ The website lists some movies with basic information and their trailers.
 
 ### Install
 1. Clone, or fork and clone, the repository:
-`git clone https://github.com/Pedroknoll/movie-trailer-website.git`
+`git clone https://github.com/Pedroknoll/fresh-tomatoes-movie-website.git`
 
 2. Install tmdbv3api available on the Python Package Index (PyPI) at [tmdbv3api](https://pypi.python.org/pypi/tmdbv3api).
 Using the command `pip install -r requirements.txt`
